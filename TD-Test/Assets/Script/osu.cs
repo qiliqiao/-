@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerControl : MonoBehaviour
+
+public class osu : MonoBehaviour 
 {
 
+	public int M_number;
 
 	[SerializeField]
 	private Transform m_Player;
@@ -12,20 +14,28 @@ public class PlayerControl : MonoBehaviour
 	private float m_Y = 1.0f;
 	private float m_Z = 4.0f;
 
-	void Start ()
+	// Use this for initialization
+	void Start () 
 	{
 
-		//if(transform.position.x==)
 	}
 
-	void Update ()
+	// Update is called once per frame
+	void Update () 
 	{
-		if (Input.GetKeyDown (KeyCode.LeftArrow))
+	}
+
+	public void onClick()
+	{
+		Debug.Log (M_number);
+		Debug.Log ("Button click!");
+
+		if (M_number == 1)
 		{
-			Debug.Log ("左");
+			m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
 			if (m_Player.position.x == -12) 
 			{
-				if (m_Player.position.z <= 4) 
+				if (m_Player.position.z <= 0) 
 				{
 					m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y, m_Player.position.z + m_Z);
 				}
@@ -39,18 +49,18 @@ public class PlayerControl : MonoBehaviour
 			}
 		}
 
-		if (Input.GetKeyDown (KeyCode.RightArrow))
+		if (M_number == 2)
 		{
-			Debug.Log ("右");
+			m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
 			if (m_Player.position.z == -12) 
 			{
-				if (m_Player.position.x <= 4) 
+				if (m_Player.position.x <= 0) 
 				{
 					m_Player.position = new Vector3 (m_Player.position.x + m_X, m_Player.position.y, m_Player.position.z);
 				}
 			}
 			else
-			{
+			{	
 				if (m_Player.position.z >= -12)
 				{
 					m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y, m_Player.position.z - m_Z);
@@ -58,10 +68,8 @@ public class PlayerControl : MonoBehaviour
 			}
 		}
 
-		if (Input.GetKeyDown (KeyCode.UpArrow))
+		if (M_number == 3)
 		{
-			Debug.Log ("上");
-
 			m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
 		}
 	}

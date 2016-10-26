@@ -45,10 +45,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CC.cs" />
-     <Compile Include="Assets\ControlCameraScript.cs" />
-     <Compile Include="Assets\PlayerControl.cs" />
-     <Compile Include="Assets\osu.cs" />
+     <Compile Include="Assets\Script\CC.cs" />
+     <Compile Include="Assets\Script\ControlCameraScript.cs" />
+     <Compile Include="Assets\Script\FloorMove.cs" />
+     <Compile Include="Assets\Script\PlayerControl.cs" />
+     <Compile Include="Assets\Script\Score.cs" />
+     <Compile Include="Assets\Script\osu.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
