@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-public class osu : MonoBehaviour 
+public class PlayerControl : MonoBehaviour
 {
 
-	public int M_number;
 
 	[SerializeField]
 	private Transform m_Player;
@@ -14,23 +12,17 @@ public class osu : MonoBehaviour
 	private float m_Y = 1.0f;
 	private float m_Z = 4.0f;
 
-	// Use this for initialization
-	void Start () 
+	void Start ()
 	{
-		
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
+
+		//if(transform.position.x==)
 	}
 
-	public void onClick()
+	void Update ()
 	{
-		Debug.Log (M_number);
-		Debug.Log ("Button click!");
-		if (M_number == 1)
+		if (Input.GetKeyDown (KeyCode.LeftArrow))
 		{
+			Debug.Log ("左");
 			if (m_Player.position.x == -12) 
 			{
 				if (m_Player.position.z <= 4) 
@@ -47,8 +39,9 @@ public class osu : MonoBehaviour
 			}
 		}
 
-		if (M_number == 2)
+		if (Input.GetKeyDown (KeyCode.RightArrow))
 		{
+			Debug.Log ("右");
 			if (m_Player.position.z == -12) 
 			{
 				if (m_Player.position.x <= 4) 
@@ -65,8 +58,10 @@ public class osu : MonoBehaviour
 			}
 		}
 
-		if (M_number == 3)
+		if (Input.GetKeyDown (KeyCode.UpArrow))
 		{
+			Debug.Log ("上");
+
 			m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
 		}
 	}

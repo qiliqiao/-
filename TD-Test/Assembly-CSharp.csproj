@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\CC.cs" />
      <Compile Include="Assets\ControlCameraScript.cs" />
+     <Compile Include="Assets\PlayerControl.cs" />
      <Compile Include="Assets\osu.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
