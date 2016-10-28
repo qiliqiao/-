@@ -12,6 +12,8 @@ public class Score : MonoBehaviour
 
 	private float m_Score;
 
+	private int m_ToInt;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -23,6 +25,6 @@ public class Score : MonoBehaviour
 	void Update () 
 	{
 		m_Score = m_Player.position.y - 1;
-		m_Text.text = "Score:" + m_Score.ToString ();
+		m_Text.text = "Score:" + ((int)m_Score).ToString ();
 	}
 }

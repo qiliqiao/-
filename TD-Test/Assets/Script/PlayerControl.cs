@@ -8,6 +8,9 @@ public class PlayerControl : MonoBehaviour
 	[SerializeField]
 	private Transform m_Player;
 
+	[SerializeField]
+	private float m_Speed;
+
 	private float m_X = 4.0f;
 	private float m_Y = 1.0f;
 	private float m_Z = 4.0f;
@@ -20,9 +23,11 @@ public class PlayerControl : MonoBehaviour
 
 	void Update ()
 	{
+		m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Speed, m_Player.position.z);
+
 		if (Input.GetKeyDown (KeyCode.LeftArrow))
 		{
-			m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
+			//m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
 			Debug.Log ("左");
 			if (m_Player.position.x == -12) 
 			{
@@ -42,7 +47,7 @@ public class PlayerControl : MonoBehaviour
 
 		if (Input.GetKeyDown (KeyCode.RightArrow))
 		{
-			m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
+			//m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
 			Debug.Log ("右");
 			if (m_Player.position.z == -12) 
 			{
@@ -64,7 +69,7 @@ public class PlayerControl : MonoBehaviour
 		{
 			Debug.Log ("上");
 
-			m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
+			//m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
 		}
 	}
 }
