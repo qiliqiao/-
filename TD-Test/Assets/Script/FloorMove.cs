@@ -9,6 +9,8 @@ public class FloorMove : MonoBehaviour
 	[SerializeField]
 	private float m_Speed;
 
+	private bool m_Pausing;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -18,6 +20,11 @@ public class FloorMove : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		m_Floor.position = new Vector3 (m_Floor.position.x, m_Floor.position.y + m_Speed, m_Floor.position.z);
+		m_Pausing = GameObject.Find("Player").GetComponent<GameOver>().pausing;
+
+		if (m_Pausing == false)
+		{
+			m_Floor.position = new Vector3 (m_Floor.position.x, m_Floor.position.y + m_Speed, m_Floor.position.z);
+		}
 	}
 }

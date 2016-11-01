@@ -48,6 +48,9 @@
      <Compile Include="Assets\Script\ControlCameraScript.cs" />
      <Compile Include="Assets\Script\FloorMove.cs" />
      <Compile Include="Assets\Script\GameOver.cs" />
+     <Compile Include="Assets\Script\Items.cs" />
+     <Compile Include="Assets\Script\MakeItems.cs" />
+     <Compile Include="Assets\Script\Pausable.cs" />
      <Compile Include="Assets\Script\PlayerControl.cs" />
      <Compile Include="Assets\Script\Score.cs" />
      <Compile Include="Assets\Script\osu.cs" />
